@@ -2,8 +2,6 @@ package com.sharfine.validate.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.sharfine.validate.enums.DatabaseType;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +10,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
-import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -55,7 +52,7 @@ public class MultipleDataSourceConfig {
     /**
      * 配置@Transactional注解事务
      *
-     * @return
+     * @return PlatformTransactionManager
      */
     @Bean
     public PlatformTransactionManager transactionManager() {
