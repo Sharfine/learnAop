@@ -1,4 +1,4 @@
-package com.sharfine.validate.validator.utils;
+package com.sharfine.validate.utils;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.domain.Page;
@@ -8,9 +8,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 

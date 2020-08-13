@@ -1,6 +1,4 @@
-package com.sharfine.validate.thread;
-
-import org.aspectj.weaver.ast.Test;
+package com.sharfine.validate.testcode.thread;
 
 import java.util.ArrayList;
 
@@ -14,6 +12,7 @@ public class Test01 {
     //可以不用volidte因为已经保证原子性
     int num = 0;
 
+    @SuppressWarnings("a")
     public static void main(String[] args) throws InterruptedException {
         ArrayList<Thread> list = new ArrayList<>();
 
@@ -22,11 +21,11 @@ public class Test01 {
         //Test01.TestThread testThread = test01.new TestThread();
         for (int i = 1; i <= 10; i++) {
 
-            Thread thread = new Thread(test01.new TestThread());
+            Thread thread = new Thread(test01::m);
 
             list.add(thread);
         }
-        list.forEach(o -> o.start());
+        list.forEach(Thread::start);
         //main线程可能会先执行完，导致值不对所以必须要最后结束
 
         /*list.forEach(o-> {
@@ -48,13 +47,6 @@ public class Test01 {
             num++;
         }
 
-    }
-
-    class TestThread implements Runnable {
-        @Override
-        public void run() {
-            test01.m();
-        }
     }
 
 }

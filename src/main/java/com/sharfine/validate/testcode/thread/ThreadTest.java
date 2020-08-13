@@ -1,4 +1,4 @@
-package com.sharfine.validate.thread;
+package com.sharfine.validate.testcode.thread;
 
 import lombok.SneakyThrows;
 

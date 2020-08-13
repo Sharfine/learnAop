@@ -1,4 +1,4 @@
-package com.sharfine.validate.validator.utils;
+package com.sharfine.validate.utils;
 
 import cn.hutool.core.util.StrUtil;
 import com.sharfine.validate.validator.BaseValidatingParam;

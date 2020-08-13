@@ -1,4 +1,4 @@
-package com.sharfine.validate.validator.utils;
+package com.sharfine.validate.utils;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -123,6 +123,7 @@ public class PagingInfo<T> {
         this.hasNext = hasNext;
     }
 
+    @Override
     public String toString() {
         return "PagingInfo(items=" + this.getItems() + ", page=" + this.getPage() + ", numPerPage=" + this.getNumPerPage() + ", totalPageNum=" + this.getTotalPageNum() + ", totalNum=" + this.getTotalNum() + ", hasPrev=" + this.getHasPrev() + ", hasNext=" + this.getHasNext() + ")";
     }
