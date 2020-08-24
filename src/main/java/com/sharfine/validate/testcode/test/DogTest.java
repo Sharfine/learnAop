@@ -10,7 +10,7 @@ import lombok.Data;
 public class DogTest {
 
     public static void main(String[] args) {
-        Dog myDog = new Dog();
+       /* Dog myDog = new Dog();
         myDog.setName("旺旺");
 
         rename(myDog);
@@ -18,7 +18,7 @@ public class DogTest {
 //        myDog =  dogTest.new Dog();
 //        myDog.setName("haha");
         System.out.println(myDog);
-
+*/
     }
 
     private static void rename(Dog myDog) {

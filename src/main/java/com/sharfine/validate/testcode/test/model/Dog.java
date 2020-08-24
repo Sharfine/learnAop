@@ -8,6 +8,10 @@ import lombok.Data;
  */
 @Data
 public class Dog {
+    Dog(String name) {
+        this.name = name;
+    }
+
     private String name;
 
 }

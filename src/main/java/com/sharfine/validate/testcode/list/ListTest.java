@@ -19,6 +19,7 @@ public class ListTest {
         list.add("c");
         list.add("d");
         list.add("e");
+        list.get(2);
 
         list.remove(2);
 

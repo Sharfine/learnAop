@@ -13,7 +13,7 @@ public class LockTest {
     private static Condition condition = lock.newCondition();
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new Thread(() -> {
             lock.lock();
             try {
@@ -30,6 +30,9 @@ public class LockTest {
             }
 
         }, "线程一").start();
+
+        Thread.sleep(1000);
+
         new Thread(() -> {
             lock.lock();
             try {
@@ -44,6 +47,21 @@ public class LockTest {
             }
 
         }, "线程二").start();
+        new Thread(() -> {
+            lock.lock();
+            try {
+                System.out.println(Thread.currentThread().getName() + "获取到锁");
+                condition.signal();
+                System.out.println(Thread.currentThread().getName() + "唤醒在等待此条件的其他线程");
+                System.out.println(Thread.currentThread().getName() + "结束");
+            } catch (Exception e) {
+                System.out.println("出现异常");
+            } finally {
+                lock.unlock();
+            }
+
+        }, "线程三").start();
     }
+
 
 }
