@@ -19,5 +19,7 @@ public class LinkedListTest {
         System.out.println(list.get(0));
 
         list.remove(1);
+
+        boolean b = list.addAll(list);
     }
 }

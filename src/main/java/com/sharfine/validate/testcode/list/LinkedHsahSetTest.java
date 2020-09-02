@@ -12,8 +12,6 @@ import java.util.LinkedHashSet;
 public class LinkedHsahSetTest {
     public static void main(String[] args) {
         LinkedHashSet<String> hashSet = new LinkedHashSet<>();
-        Wang wang = new Wang("wangwang");
-        System.out.println(wang);
 
         hashSet.add("aa");
         hashSet.add("bb");
